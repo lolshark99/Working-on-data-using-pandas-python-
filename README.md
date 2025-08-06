@@ -5,4 +5,4 @@ Basic concepts like imutator and a heatmap have been implemented.
 
 Finally did the titanic prob and achieved 82.12 percent accuracy.
 
-Currently working on Cali house price prediction.
+Currently working on California house price prediction.
