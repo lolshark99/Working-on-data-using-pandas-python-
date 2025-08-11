@@ -23,7 +23,7 @@ def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 
 def deriv_sigmoid(z):
-    return sigmoid(z) - (1 - sigmoid(z))
+    return sigmoid(z) * (1 - sigmoid(z))
 
 def tanh_deriv(z):
     return 1 - np.tanh(z)**2
@@ -138,4 +138,5 @@ plt.xlabel("Actual House Price")
 plt.ylabel("Predicted House Price")
 plt.title("Actual vs Predicted House Prices")
 plt.grid(True)
+
 plt.show()
