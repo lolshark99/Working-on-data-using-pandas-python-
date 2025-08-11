@@ -9,6 +9,9 @@ X = data.data.to_numpy()
 X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 X = X.T   
 Y = data.target.to_numpy()   
+Y_mean = Y.mean()
+Y_std = Y.std()
+Y = (Y - Y_mean) / Y_std 
 Y = Y.reshape(1 , -1)
 
 n1 = 30
@@ -89,7 +92,7 @@ def update_parameters(grads , parameters):
 
 parameters = params_init(n1 , n2 , n3)
 
-epochs = 100
+epochs = 10
 mse_list = []
 y_true = Y.flatten()
 
@@ -138,5 +141,4 @@ plt.xlabel("Actual House Price")
 plt.ylabel("Predicted House Price")
 plt.title("Actual vs Predicted House Prices")
 plt.grid(True)
-
 plt.show()
