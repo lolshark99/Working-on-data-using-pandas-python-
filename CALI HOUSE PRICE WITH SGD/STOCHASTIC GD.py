@@ -13,7 +13,7 @@ Y_mean = Y.mean()
 Y_std = Y.std()
 Y = (Y - Y_mean) / Y_std 
 Y = Y.reshape(1 , -1)
-
+# the above block of code loads the dataset and does the standardization 
 n1 = 30
 n2 = 20
 n3 = 1
@@ -141,4 +141,5 @@ plt.xlabel("Actual House Price")
 plt.ylabel("Predicted House Price")
 plt.title("Actual vs Predicted House Prices")
 plt.grid(True)
+
 plt.show()
