@@ -2,8 +2,7 @@ from sklearn.datasets import fetch_california_housing
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error
-
-
+#import the basic modules and the dataset.
 data = fetch_california_housing(as_frame=True)
 X = data.data.to_numpy()
 X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
@@ -143,3 +142,4 @@ plt.title("Actual vs Predicted House Prices")
 plt.grid(True)
 
 plt.show()
+
